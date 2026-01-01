@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoticonActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MoticonActivity">
+
+        <TextView
+            android:id="@+id/sensorData_Phone"
+            android:layout_width="179dp"
+            android:layout_height="31dp"
+            android:text="Phone reading"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSTSP" />
+
+        <TextView
+            android:id="@+id/sensorData_Moticon"
+            android:layout_width="179dp"
+            android:layout_height="31dp"
+            android:text="Moticon reading"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSTSP" />
+
+        <TextView
+            android:id="@+id/statusBar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="#A67C00"
+            android:gravity="center"
+            android:text="Initiating Wi-Fi Direct network..."
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonSTSP"
+            android:layout_width="179dp"
+            android:layout_height="82dp"
+            android:text="Start Recording"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonMoticon"
+            android:layout_width="179dp"
+            android:layout_height="82dp"
+            android:text="Prepare Moticon"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/buttonAudio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSTSP"
+            app:layout_constraintVertical_bias="0.161" />
+
+        <Button
+            android:id="@+id/buttonAudio"
+            android:layout_width="179dp"
+            android:layout_height="82dp"
+            android:text="START Audio"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonMoticon"
+            app:layout_constraintVertical_bias="0.161" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="351dp"
+            android:layout_height="236dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonSTSP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusBar" />
+
+        <ProgressBar
+            android:id="@+id/progressBar_SBC"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="149dp"
+            android:layout_height="121dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="0.26" />
+
+        <ProgressBar
+            android:id="@+id/progressBar_Moticon"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="149dp"
+            android:layout_height="121dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="0.26" />
+
+        <TextView
+            android:id="@+id/statusText_SBC"
+            android:layout_width="149dp"
+            android:layout_height="31dp"
+            android:text="Searching..."
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar_SBC" />
+
+        <TextView
+            android:id="@+id/statusText_Moticon"
+            android:layout_width="149dp"
+            android:layout_height="31dp"
+            android:text="Searching..."
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar_Moticon" />
+
+        <ImageView
+            android:id="@+id/greenCheck_SBC"
+            android:layout_width="121dp"
+            android:layout_height="101dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBar_SBC"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar_SBC"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/progressBar_SBC"
+            app:layout_constraintTop_toTopOf="@+id/progressBar_SBC"
+            app:layout_constraintVertical_bias="0.55"
+            app:srcCompat="@drawable/avd_done" />
+
+        <ImageView
+            android:id="@+id/greenCheck_Moticon"
+            android:layout_width="121dp"
+            android:layout_height="101dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBar_Moticon"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar_Moticon"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/progressBar_Moticon"
+            app:layout_constraintTop_toTopOf="@+id/progressBar_Moticon"
+            app:layout_constraintVertical_bias="0.55"
+            app:srcCompat="@drawable/avd_done" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/sensorData_Phone"
+        android:layout_width="179dp"
+        android:layout_height="31dp"
+        android:text="Phone reading"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSTSP" />
+
+    <TextView
+        android:id="@+id/sensorData_Moticon"
+        android:layout_width="179dp"
+        android:layout_height="31dp"
+        android:text="Moticon reading"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSTSP" />
+
+    <TextView
+        android:id="@+id/statusBar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#A67C00"
+        android:gravity="center"
+        android:text="Initiating Wi-Fi Direct network..."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSTSP"
+        android:layout_width="179dp"
+        android:layout_height="82dp"
+        android:text="Start Recording"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMoticon"
+        android:layout_width="179dp"
+        android:layout_height="82dp"
+        android:text="Prepare Moticon"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/buttonAudio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSTSP"
+        app:layout_constraintVertical_bias="0.161" />
+
+    <Button
+        android:id="@+id/buttonAudio"
+        android:layout_width="179dp"
+        android:layout_height="82dp"
+        android:text="START Audio"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMoticon"
+        app:layout_constraintVertical_bias="0.161" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="351dp"
+        android:layout_height="236dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSTSP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusBar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_SBC"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="149dp"
+        android:layout_height="121dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_Moticon"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="149dp"
+        android:layout_height="121dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/statusText_SBC"
+        android:layout_width="149dp"
+        android:layout_height="31dp"
+        android:text="Searching..."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar_SBC" />
+
+    <TextView
+        android:id="@+id/statusText_Moticon"
+        android:layout_width="149dp"
+        android:layout_height="31dp"
+        android:text="Searching..."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar_Moticon" />
+
+    <ImageView
+        android:id="@+id/greenCheck_SBC"
+        android:layout_width="121dp"
+        android:layout_height="101dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar_SBC"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar_SBC"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/progressBar_SBC"
+        app:layout_constraintTop_toTopOf="@+id/progressBar_SBC"
+        app:layout_constraintVertical_bias="0.55"
+        app:srcCompat="@drawable/avd_done" />
+
+    <ImageView
+        android:id="@+id/greenCheck_Moticon"
+        android:layout_width="121dp"
+        android:layout_height="101dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar_Moticon"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar_Moticon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/progressBar_Moticon"
+        app:layout_constraintTop_toTopOf="@+id/progressBar_Moticon"
+        app:layout_constraintVertical_bias="0.55"
+        app:srcCompat="@drawable/avd_done" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
