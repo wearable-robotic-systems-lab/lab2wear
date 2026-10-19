@@ -79,7 +79,7 @@ Lab2Wear addresses this by using the **phone clock as a unifying timebase**, and
 
 **MOTICON SDK Notice**
 
--The MOTICON APK is proprietary software and is not included in this repository. Users who wish to use MOTICON-related functionality must obtain the required APK and license directly from MOTICON.  
+- The MOTICON SDK (`moticon_insole3_service-*.aar`) is proprietary software and is not included in this repository. Users who wish to use MOTICON-related functionality must obtain the SDK and license directly from MOTICON and place the `.aar` in `android/DataLoggerMoticon 4_combined_v9_20251103/app/libs/` (see `MOTICON_SDK.md` there).
 
 ### 2) Build & run (overview)
 

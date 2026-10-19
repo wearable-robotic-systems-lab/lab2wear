@@ -1,1 +1,3 @@
 /build
+# Proprietary Moticon SDK - obtain from Moticon, do not commit
+/libs/moticon_insole3_service-*.aar
