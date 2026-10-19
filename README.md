@@ -76,6 +76,11 @@ Lab2Wear addresses this by using the **phone clock as a unifying timebase**, and
 - Linux development environment for the Sync Box (C++)
 - Vendor wearable SDKs/APIs (for your target device)
 
+
+**MOTICON SDK Notice**
+
+-The MOTICON APK is proprietary software and is not included in this repository. Users who wish to use MOTICON-related functionality must obtain the required APK and license directly from MOTICON.  
+
 ### 2) Build & run (overview)
 
 **Sync Box**
